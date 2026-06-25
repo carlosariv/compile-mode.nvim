@@ -171,6 +171,8 @@ function M.split_unless_open(opts, smods, count)
 		if count ~= 0 and count ~= nil then
 			vim.cmd({ cmd = "resize", args = { count }, mods = smods })
 		end
+
+        vim.cmd("resize 15")
 	end
 
 	return bufnr
