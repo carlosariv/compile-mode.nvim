@@ -165,6 +165,7 @@ function M.split_unless_open(opts, smods, count)
 		end)
 
 	if not window_open then
+        smods.split = "botright"
 		vim.cmd({ cmd = "sbuffer", args = { bufnr }, mods = smods })
 
 		if count ~= 0 and count ~= nil then
